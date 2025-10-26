@@ -1,0 +1,17 @@
+.clock-container {
+    /* Glassmorphism base */
+    background: rgba(30, 41, 59, 0.4); /* Dark blue-gray with transparency */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    /* Neon border and shadow effect */
+    border: 1px solid rgba(139, 92, 246, 0.5); /* Semi-transparent purple border */
+    box-shadow: 
+        0 0 20px rgba(139, 92, 246, 0.6), /* Strong outer glow */
+        inset 0 0 15px rgba(255, 255, 255, 0.1); /* Subtle inner light */
+}
+
+/* Font glow effect */
+.time-glow {
+    text-shadow: 0 0 10px #C4B5FD, 0 0 20px #8B5CF6;
+}
