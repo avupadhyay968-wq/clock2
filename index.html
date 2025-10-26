@@ -10,34 +10,76 @@
     
     <style>
         /* This minimal CSS centers the content vertically and horizontally */
-        body {
+       body {
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh; /* Full viewport height */
+            min-height: 100vh;
             margin: 0;
-            background-image: url("https://img.etimg.com/thumb/msid-123912484,width-650,height-488,imgsize-78068,resizemode-75/demon-slayer-infinity-castle.jpg"); /* Dark background for a digital look */
+            
+            /* Background Image Properties */
+            background-image: url('space-bg.jpg'); /* 👈 अपनी इमेज का नाम यहाँ बदलें */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
             color: white;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Orbitron', sans-serif; /* Orbitron Font */
             flex-direction: column;
         }
 
-        /* Styling to emulate the requested font style (Type something to start) */
-        .time-display {
-            border: 8px;
-            border-color: azure;
-            font-size: 8rem; /* Large font size */
-            font-weight: 900; /* Extra bold */
-            letter-spacing: 0.1em;
-            text-shadow: 0 0 10px rgba(171, 142, 237, 0.8), 0 0 20px rgba(171, 142, 237, 0.6); /* Violet neon glow */
-            color: #ABAEDE; /* Light violet color */
+        /* CLOCK WRAPPER: Overlay and Blur */
+        #clock-wrapper {
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px); /* Optional blur effect */
         }
 
+        /* TIME DISPLAY STYLE - Large Font and Neon Glow */
+        .time-display {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 8rem; /* Desktop size */
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            text-shadow: 0 0 10px rgba(171, 142, 237, 0.8), 0 0 20px rgba(171, 142, 237, 0.6);
+            color: #ABAEDE;
+        }
+        
+        /* DATE DISPLAY STYLE */
         .date-display {
             font-size: 1.5rem;
             font-weight: 300;
             color: #CCCCCC;
             margin-top: 1rem;
+        }
+
+        /* ---------------------------------------------------- */
+        /* 📱 MOBILE RESPONSIVENESS (For screens 600px and below) */
+        @media (max-width: 600px) {
+            
+            /* Reduce time font size for mobile */
+            .time-display {
+                font-size: 4.5rem; 
+                letter-spacing: 0.05em; 
+            }
+
+            /* Reduce date font size for mobile */
+            .date-display {
+                font-size: 1.2rem;
+            }
+
+            /* Adjust wrapper padding and width */
+            #clock-wrapper {
+                padding: 20px;
+                width: 90%; 
+            }
+            
+            /* Reduce H1 heading size */
+            h1 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
