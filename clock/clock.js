@@ -1,8 +1,6 @@
 const timeDisplay = document.getElementById('time-display');
 const dateDisplay = document.getElementById('date-display');
 const ampmIndicator = document.getElementById('ampm-indicator');
-const timezoneInfo = document.getElementById('timezone-info');
-
 /**
  * Converts the raw time to display strings.
  */
@@ -35,10 +33,6 @@ function updateClock() {
 
     // 3. Time Zone Display (only update once)
     // This is wrapped to avoid constantly re-calculating the timezone string on every tick
-    if (timezoneInfo.textContent === 'Local Time Zone') {
-        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        timezoneInfo.textContent = tz;
-    }
 }
 
 // Initialize and start the clock update interval
